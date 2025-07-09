@@ -1,5 +1,0 @@
-Metric,Count,loan_default_proba,actual_label,predicted_label,Source
-True Positive,843,,,,Summary
-False Positive,1443,,,,Summary
-False Negative,4122,,,,Summary
-True Negative,55095,,,,Summary
