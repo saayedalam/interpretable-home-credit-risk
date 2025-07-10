@@ -1,9 +1,9 @@
 {
-    "num_leaves": 33,
-    "max_depth": 8,
-    "learning_rate": 0.09149251399295534,
-    "feature_fraction": 0.6304557043964334,
-    "bagging_fraction": 0.8947556220715707,
-    "bagging_freq": 8,
-    "min_child_samples": 95
+    "num_leaves": 58,
+    "max_depth": 10,
+    "learning_rate": 0.08233313024008523,
+    "feature_fraction": 0.9124285268168659,
+    "bagging_fraction": 0.974493611690566,
+    "bagging_freq": 1,
+    "min_child_samples": 97
 }
