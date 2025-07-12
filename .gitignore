@@ -5,3 +5,6 @@ data/raw/application_train.csv
 # Ignore local environment files
 
 .ipynb_checkpoints/
+
+# Ignore all .gitkeep files
+.gitkeep
