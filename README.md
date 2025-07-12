@@ -1,73 +1,88 @@
-# 🏠 Interpretable Home Risk
 
-This project explores **credit risk modeling** using the Home Credit Default Risk dataset. It focuses on building a transparent, interpretable machine learning pipeline that balances predictive performance with real-world explainability.
+# 🧠 Interpretable Home Credit Risk
 
-🔍 All model outputs are translated into **interactive Tableau dashboards** for stakeholders.
+This project builds a transparent and explainable credit risk model using the **Home Credit Default Risk dataset**. It is designed to help lenders assess loan applicants with limited credit history—combining machine learning accuracy with **regulator-friendly interpretability** through SHAP and Tableau dashboards.
 
-🔗 **Tableau Dashboard**:  
-[Loan Default Risk Analysis — Model Results, SHAP & Metrics](https://public.tableau.com/app/profile/saayed.alam/viz/LoanDefaultRiskAnalysisModelResultsSHAPMetrics/0-Overview)
+> 📊 **Live Dashboard**: [Loan Default Risk Analysis (Tableau Public)](https://public.tableau.com/app/profile/saayed.alam/viz/LoanDefaultRiskAnalysisModelResultsSHAPMetrics/0-Overview)
 
 ---
 
-## 📦 Dataset
+## 🎯 Project Objective
 
-- Source: [Kaggle – Home Credit Default Risk](https://www.kaggle.com/competitions/home-credit-default-risk)
-- Size: ~150MB (not included in this repo due to size limits)
-- Description: Includes financial, demographic, and credit history data for loan applicants.
-
----
-
-## 🧠 Project Structure
-
-| Folder / File | Purpose |
-|---------------|---------|
-| `notebooks/`  | Clean, modular Jupyter notebooks (EDA, modeling, SHAP, Tableau prep) |
-| `models/`     | Saved trained LightGBM model |
-| `data/processed/` | Cleaned and encoded data |
-| `data/final/` | Tableau-ready CSV exports |
-| `.gitignore`  | Ensures raw data and temp files are excluded from GitHub |
-| `requirements.txt` | Python dependencies for reproducibility |
+To develop a machine learning pipeline that:
+- Predicts the **probability of loan default** using LightGBM
+- Explains individual and global model decisions using **SHAP**
+- Translates results into **interactive, stakeholder-friendly Tableau dashboards**
 
 ---
 
-## 🎯 Key Goals
+## 📌 Key Results & Highlights
 
-- Build a high-performing credit risk model (LightGBM)
-- Ensure **interpretability** with SHAP values
-- Segment results by **risk bands**
-- Export visual-ready data for Tableau
-- Share findings via an interactive dashboard
-
----
-
-## 📊 Core Visualizations
-
-1. **SHAP Global Importance**  
-   - Feature-level impact rankings on model output  
-2. **Risk Distribution by Ground Truth**  
-   - Histogram of predicted scores by actual label  
-3. **SHAP Aggregated by Risk Band**  
-   - Top 15 features grouped by low, medium, high risk  
-4. **SHAP vs. Risk Score**  
-   - Scatter plots of feature impact vs. probability  
-5. **Confusion Matrix & Metrics**  
-   - Precision, recall, TP/FP/FN/TN breakdown  
+- 🔍 Achieved clear **SHAP-based interpretability** for all predictions  
+- 🧮 Final model: **LightGBM with Optuna tuning**, threshold = 0.30  
+- 🧠 Global & local insights transformed into **5 core Tableau visualizations**  
+- ✅ Structured outputs for **auditors, risk managers, and product teams**
 
 ---
 
-## ⚙️ Setup Instructions
+## 📂 Project Structure
+
+```
+home-credit-risk/
+│
+├── data/
+│   ├── processed/              # Cleaned & encoded datasets
+│   └── final/                  # Tableau-ready CSV outputs
+│
+├── models/                     # Final trained LightGBM model
+│
+├── notebooks/
+│   ├── 1_data_cleaning.ipynb   # Missing values, encoding, class imbalance
+│   ├── 2_modeling.ipynb        # Optuna tuning, LightGBM, SHAP summary
+│   ├── 3_explainability.ipynb  # SHAP visualizations & ratios
+│   └── 4_tableau_export.ipynb  # CSVs for dashboard integration
+│
+└── README.md                   # This file
+```
+
+---
+
+## 📈 Tableau Dashboard Overview
+
+The following CSV exports power a full Tableau Public dashboard:
+
+| 🔢 Visualization                   | 📁 CSV Export                             | Description                                |
+|-----------------------------------|-------------------------------------------|--------------------------------------------|
+| SHAP Global Importance            | `global_shap_importance.csv`              | Top features by global SHAP impact         |
+| Score Distribution by Label       | `risk_distribution.csv`                   | Predicted score distribution by outcome    |
+| SHAP by Risk Band                 | `agg_shap_by_risk_band.csv`               | Feature impact segmented by risk group     |
+| SHAP vs Risk Score                | `shap_vs_risk_long.csv`                   | SHAP contribution vs predicted probability |
+| Confusion Matrix                  | `confusion_prediction_only.csv`, `confusion_summary.csv` | Prediction outcomes and metrics   |
+
+---
+
+## ⚙️ Setup & Requirements
+
+> Clone the repo and install required libraries:
 
 ```bash
-# Clone the repo
 git clone git@github.com:saayedalam/interpretable-home-credit-risk.git
 cd interpretable-home-credit-risk
-
-# (Optional) Create a virtual environment
-python3 -m venv jupyterlab-env
-source jupyterlab-env/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
+```
 
-# Launch JupyterLab
-jupyter lab
+> 🔒 **Note**: Raw dataset (`application_train.csv`) is excluded due to file size.  
+> You can download it manually from [Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk/data).
+
+---
+
+## 📜 License
+
+This project is open-sourced under the MIT License. See `LICENSE` for details.
+
+---
+
+## 👋 Credits
+
+Built by **Saayed Alam**  
+Designed for **data analysts and ML professionals** seeking to deliver transparent, human-centered risk models.
