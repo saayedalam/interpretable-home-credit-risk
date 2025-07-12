@@ -1,6 +1,6 @@
-# Ignore raw data and large files
+# Ignore all files in data/raw except .gitkeep
 data/raw/*
-!data/raw/.gitkeep  # Allow .gitkeep to be tracked so folder stays visible
+!data/raw/.gitkeep
 
 # Ignore local environment files
 .ipynb_checkpoints/
