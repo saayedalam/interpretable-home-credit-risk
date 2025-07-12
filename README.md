@@ -1,9 +1,16 @@
-
 # 🧠 Interpretable Home Credit Risk
 
 This project builds a transparent and explainable credit risk model using the **Home Credit Default Risk dataset**. It is designed to help lenders assess loan applicants with limited credit history—combining machine learning accuracy with **regulator-friendly interpretability** through SHAP and Tableau dashboards.
 
 > 📊 **Live Dashboard**: [Loan Default Risk Analysis (Tableau Public)](https://public.tableau.com/app/profile/saayed.alam/viz/LoanDefaultRiskAnalysisModelResultsSHAPMetrics/0-Overview)
+
+---
+
+## 🖼️ Dashboard Preview
+
+<p align="center">
+  <img src="dashboard/overview.png" alt="Interpretable Credit Risk Dashboard Overview" width="800"/>
+</p>
 
 ---
 
@@ -41,6 +48,9 @@ home-credit-risk/
 │   ├── 2_modeling.ipynb        # Optuna tuning, LightGBM, SHAP summary
 │   ├── 3_explainability.ipynb  # SHAP visualizations & ratios
 │   └── 4_tableau_export.ipynb  # CSVs for dashboard integration
+│
+├── dashboard/
+│   └── overview.png            # Static image of dashboard homepage
 │
 └── README.md                   # This file
 ```
