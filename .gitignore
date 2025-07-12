@@ -1,10 +1,10 @@
 # Ignore raw data and large files
-data/raw/application_train.csv
-
+data/raw/*
+!data/raw/.gitkeep  # Allow .gitkeep to be tracked so folder stays visible
 
 # Ignore local environment files
-
 .ipynb_checkpoints/
 
-# Ignore all .gitkeep files
-.gitkeep
+# OPTIONAL: Ignore all other .gitkeep files if you don't want to track them elsewhere
+# But don't use this line if you want to track .gitkeep in other folders
+# .gitkeep
